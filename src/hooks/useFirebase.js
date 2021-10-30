@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
 import { useState, useEffect } from 'react';
 import initializeAuthentication from '../components/Firebase/firebase.init';
 
@@ -27,6 +27,22 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [])
+    
+    // updae user name
+    const updateName= (name)=> {
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+          const newUser={...user, displayName: name} // recommend
+         setUser(newUser)
+          
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
+      }
+
 
     const logOut = () => {
         signOut(auth)
@@ -36,6 +52,7 @@ const useFirebase = () => {
     return {
         user,
         signInUsingGoogle,
+        updateName,
         logOut
     }
 }

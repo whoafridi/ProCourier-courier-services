@@ -7,6 +7,13 @@ import AboutUs from './components/AboutUs/AboutUs';
 import NotFound from './components/NotFound/NotFound';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './contexts/AuthProvider';
+import Services from './components/Services/Services';
+import Service from './components/Service/Service';
+import AddService from './components/AddService/AddService';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking';
+import MyBooked from './components/MyBooked/MyBooked';
+import ManageBooked from './components/ManageBooked/ManageBooked';
 
 function App() {
   return (
@@ -21,15 +28,15 @@ function App() {
           <Route path="/home">
             <Home/>
           </Route>
-          {/* <Route path="/services">
-            <Services></Services>
+           <Route path="/services">
+            <Services/>
           </Route>
-          <PrivateRoute path="/service/:id">
+           <PrivateRoute path="/service/:id">
             <Service></Service>
           </PrivateRoute>
-          <PrivateRoute path="/">
-            <Appointment></Appointment>
-          </PrivateRoute> */}
+           <PrivateRoute path="/booking/:id">
+            <Booking/>
+          </PrivateRoute>  
           <Route path="/aboutus">
             <AboutUs/>
           </Route>
@@ -39,6 +46,15 @@ function App() {
           <Route path="/registration">
             <Registration/>
           </Route>
+          <PrivateRoute path="/addservice">
+            <AddService/>
+          </PrivateRoute>
+          <PrivateRoute path="/mybooked">
+            <MyBooked/>
+          </PrivateRoute>
+          <PrivateRoute path="/managebooked">
+            <ManageBooked/>
+          </PrivateRoute>
           <Route path="*">
             <NotFound/>
           </Route>
