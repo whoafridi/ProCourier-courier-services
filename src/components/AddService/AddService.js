@@ -21,6 +21,7 @@ const AddService = () => {
     return (
         <div className="add-service">
             <h2 className="text-center">Please Add a Service</h2>
+            <h3 className="text-center">Only admin can add services</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Service Name" />
                 <textarea {...register("description")} placeholder="Description" />

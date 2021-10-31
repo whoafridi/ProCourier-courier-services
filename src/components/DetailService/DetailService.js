@@ -8,11 +8,11 @@ const DetailService = ({s}) => {
     return (
         <>
             <div className="row">
-                <div className="col lg-5">
+                <div className="col-lg-5 col-sm-12">
                     <h2 className="text-center fe-bold">{servicename}</h2>
                     <img style={{width:"90%"}} src={img} alt={servicename}/>
                 </div>
-                <div className="col lg-7">
+                <div className="col-lg-7 col-sm-12">
                     <p className="mt-5">{description}</p>
                     <h6>Price : {price}</h6>
                 </div>

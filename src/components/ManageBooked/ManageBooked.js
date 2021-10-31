@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import {Button} from 'react-bootstrap';
 
 const ManageBooked = () => {
     const [book, setBook] = useState([]);
@@ -30,7 +31,7 @@ const ManageBooked = () => {
                     <td>{s.servicename}</td>
                     <td>{s.shipping_address}</td>
                     <td>{s.price}</td>
-                    <td><i class='bx bxs-cylinder'></i></td>
+                    <td><Button variant="dark">Delete</Button> only admin can delete</td>
                     </tr>
                 </tbody>
                 )

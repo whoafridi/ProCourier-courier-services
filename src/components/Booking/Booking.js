@@ -45,7 +45,7 @@ const Booking = () => {
         <div className="container">
             <h2 className="text-center mt-3">Booking page</h2>
          <div className="row">
-             <div className="col md-6 mt-5">
+             <div className="col-md-6 mt-5 col-sm-12">
                 {
                 single.map(s => <div key={s._id}>
                     <h4>{s.servicename} </h4>
@@ -54,7 +54,7 @@ const Booking = () => {
                     </div>)
                 }                 
              </div>
-             <div className="col md-6 mt-5">
+             <div className="col-md-6 mt-5 col-sm-12">
                  {
                      single.map(si =>  
                         <>

@@ -5,13 +5,13 @@ const Footer = ()=>{
 return (
     <div className="container mt-5 footer">
         <div className="row">
-            <div className="col md-4 mt-5">
+            <div className="col-md-4 mt-5 col-sm-12">
                 <h3 className="title">ProCourier</h3>
                 <p  className="title">12/2, Dhanmondi 3-A, Dhaka-1209</p>
                 <p  className="title">info@procourier.com</p>
                 <p  className="title">Hotline: 0980987665</p>
             </div>
-            <div className="col md-4 mt-5">
+            <div className="col-md-4 mt-5 col-sm-12">
             <h2 className="text-center fw-bold title">Subscribe to our newsletter</h2>
         <InputGroup >
             <FormControl className="rounded"
@@ -24,7 +24,7 @@ return (
             </Button>
         </InputGroup>
             </div>
-            <div className="col md-4 mt-5">
+            <div className="col-md-4 mt-5 col-sm-12">
             <h2 className="text-center fw-bold title">Follow social network</h2>
                 <div className="icons">
                     <h1><i className='bx bxl-facebook-circle'></i></h1>

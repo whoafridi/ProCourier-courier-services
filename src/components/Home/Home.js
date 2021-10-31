@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Row, Button } from 'react-bootstrap';
+import { Row, Button, Spinner } from 'react-bootstrap';
 import Analysis from '../Analysis/Analysis'
 import Details from '../Details/Details'
 import Faq from '../Faq/Faq'
@@ -20,13 +20,41 @@ const Home = () => {
             <Slider/>
             <Track/>
             {/* load data from server */}
-            <div className="container">
-                <Row xs={1} md={3} className="g-4">
-                {
-                    services.map(service => <Details key={service._id} service={service}></Details>)
-                }
-                </Row>
-            </div>
+            { services.length < 0 ?
+               <div className="row mt-5 mb-5">
+                   <div className="col text-center">
+                   <Button variant="primary" disabled>
+                <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                />
+                <span className="visually-hidden ">Loading...from api</span>
+                </Button>{' '}
+                <Button variant="primary" disabled>
+                <Spinner
+                    as="span"
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                />
+                Loading...from api
+                </Button>
+                   </div>
+               </div>
+                    :
+                <div className="container">
+                    <Row xs={1} md={3} className="g-4">
+                    {
+                        services.map(service => <Details key={service._id} service={service}></Details>)
+                    }
+                    </Row>
+                </div>
+            }
+
             <Analysis/>
             <Review/>
             <Interest/>

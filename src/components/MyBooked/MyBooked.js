@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useAuth from '../../hooks/useAuth';
+import {Button} from 'react-bootstrap';
 
 const MyBooked = () => {
     const {user} = useAuth();
@@ -16,6 +17,25 @@ const MyBooked = () => {
         const values = book.filter((s) => s.email == user.email)
         setSingle(values);
       },[book]);
+
+     // DELETE AN USER
+     const handleDeleteUser = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `https://mighty-inlet-11453.herokuapp.com/booked/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remainingBooks = book.filter(b => b._id !== id);
+                        setBook(remainingBooks);
+                    }
+                });
+            }
+        }
 
     return (
         <div className="container">
@@ -38,7 +58,7 @@ const MyBooked = () => {
                         <td>{s.servicename}</td>
                         <td>{s.shipping_address}</td>
                         <td>{s.price}</td>
-                        <td><i class='bx bxs-cylinder'></i></td>
+                        <td><Button variant="dark" onClick={() => handleDeleteUser(s._id)}>Delete</Button></td>
                         </tr>
                     </tbody>
                     )

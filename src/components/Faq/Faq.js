@@ -4,9 +4,9 @@ import { Accordion} from 'react-bootstrap';
 const Faq = () => {
     return (
         <>
-        <h2 className="fw-bold text-center mb-4 mt-5">Frequently Asked Questions ?</h2>
+        <h2 className="fw-bold text-center mt-5">Frequently Asked Questions ?</h2>
         <div className="container row mb-5 mt-5">
-            <div className="col lg-6 md-12">
+            <div className="col-md-6 col-sm-12">
             <Accordion defaultActiveKey="0" flush>
             <Accordion.Item eventKey="0">
                 <Accordion.Header>Why choose us?</Accordion.Header>
@@ -46,7 +46,7 @@ const Faq = () => {
             </Accordion.Item>
             </Accordion>
             </div>
-            <div className="col lg-6 md-12 ms-5 pd-5">
+            <div className="col-md-6 col-sm-12">
                 <img style={{width:"100%"}} src="https://drcourier.ae/images/about-img1.png" alt="courier-service" />
            </div>
         </div>

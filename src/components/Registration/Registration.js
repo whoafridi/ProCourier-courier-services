@@ -53,6 +53,13 @@ const Registration = () => {
         updateProfile(auth.currentUser, { displayName: name })
           .then(result => { })
       }
+      // google login
+      const handleGooglelogin = () =>{
+        signInUsingGoogle()
+        .then(result =>{
+            history.push(redirect_uri);
+        })
+     }
 
     return (
         <div className="container">
@@ -76,7 +83,7 @@ const Registration = () => {
                 Registration
             </Button>
             </Form>
-            <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button>
+            <button onClick={handleGooglelogin} className="btn btn-warning">Google Sign In</button>
             <h4>Already have an account? <Link to="/login">
             <Button variant="warning" type="submit">
                 Login

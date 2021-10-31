@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, FormControl, InputGroup } from 'react-bootstrap'
 const Track = () => {
     return (
-        <div className="container md-4 w-50 mt-4">
+        <div className="container md-4 w-50 mt-4 sm-12">
             <h3 className="text-center fw-bold">Track your percel</h3>
             <InputGroup className="mb-3 shadow-lg p-3 mb-5 bg-body rounded me-2">
             <FormControl className="rounded"
