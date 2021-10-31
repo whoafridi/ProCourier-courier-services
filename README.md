@@ -1,6 +1,6 @@
 ## Assignment - 11 - ProCourier - a courier services related website
 
-## live site [link](https://pro-denti.web.app/)
+## live site [link](https://pro-courier.web.app)
 
 ## Main Points
 
