@@ -1,4 +1,4 @@
-## Assignment - 11 - ProCourier - a courier services related website
+## ProCourier - a courier services related website
 
 ## live site [link](https://pro-courier.web.app)
 

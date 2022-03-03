@@ -63,32 +63,39 @@ const Registration = () => {
 
     return (
         <div className="container">
-            <h2 className="fw-bold mt-3 mb-3">Welcome to Registration!</h2>
-            <Form>
+            <h2 className="fw-bold mt-3 mb-3 text-center">Welcome to Registration!</h2>
+            <div className='row'>
+                <div className='col-md-5 col-sm-12'>
+                <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Enter name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" onBlur={handleNameChange}/>
+                <Form.Control className='rounded-pill' type="text" placeholder="Enter your name" onBlur={handleNameChange}/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" onBlur={handleEmailChange}/>
+                <Form.Control className='rounded-pill'  type="email" placeholder="Enter email" onBlur={handleEmailChange}/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange}/>
+                <Form.Control className='rounded-pill'  type="password" placeholder="Password" onBlur={handlePasswordChange}/>
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleRegistration}>
+            <Button variant="primary" type="submit" onClick={handleRegistration} className='rounded-pill'>
                 Registration
             </Button>
             </Form>
-            <button onClick={handleGooglelogin} className="btn btn-warning">Google Sign In</button>
-            <h4>Already have an account? <Link to="/login">
-            <Button variant="warning" type="submit">
+            <button onClick={handleGooglelogin} className="btn btn-warning mt-2 mb-3 rounded-pill">Google Sign In</button>
+            <p>Already have an account? <Link to="/login" className='text-decoration-none ps-2'>
+            <a className='text-decoration-none' variant="warning" type="submit">
                 Login
-            </Button>
-            </Link></h4>
+            </a>
+            </Link></p>
+                </div>
+                <div className='col-md-7 col-sm-12'>
+                    <img className='img-fluid' src="https://thumbs.dreamstime.com/b/online-registration-sign-up-concept-young-people-signing-login-to-account-user-interface-secure-password-modern-vector-194944767.jpg" alt="name"/>
+                </div>
+            </div>
         </div>
     )
 }

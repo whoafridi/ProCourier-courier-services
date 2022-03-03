@@ -1,3 +1,7 @@
 .text-color{
     color: #101056;
 }
+.analysis{
+    /* background-color: gainsboro; */
+    border-radius: 30px;
+}
