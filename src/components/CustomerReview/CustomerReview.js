@@ -10,7 +10,7 @@ const CustomerReview = ({ r }) => {
         className="shadow p-3 mb-5 bg-body rounded"
         key={r._id}
       >
-        <Card.Header>{r._id}</Card.Header>
+        <Card.Header>{r.displayName}</Card.Header>
         <Card.Body>
           <Card.Text>
             {r.review}
