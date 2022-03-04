@@ -76,7 +76,7 @@ const Registration = () => {
       <h2 className="fw-bold mt-3 mb-3 text-center">
         Welcome to Registration!
       </h2>
-      <div className="row">
+      <div className="row d-flex justify-content-center align-items-center">
         <div className="col-md-5 col-sm-12">
           <Form noValidate validated={validated}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -153,6 +153,7 @@ const Registration = () => {
         </div>
         <div className="col-md-7 col-sm-12">
           <img
+            className="img-fluid"
             src="https://img.freepik.com/free-vector/cartoon-character-filling-form-survey-checklist-man-writing-test-signing-business-medical-document-flat-illustration_74855-20483.jpg"
             alt="name"
           />
