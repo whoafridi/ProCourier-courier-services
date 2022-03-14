@@ -2,7 +2,8 @@ import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-
+import courier from '../../delivery-truck.png'
+// /home/afridi/Music/projects/ProCourier-courier-services/src/delivery-truck.png
 const Header = () => {
   const { user, logOut } = useAuth();
   return (
@@ -16,7 +17,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
-            ProCourier
+          <img src={courier} style={{width:"30px"}} alt="pro-courier"/> ProCourier
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
