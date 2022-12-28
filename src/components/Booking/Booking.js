@@ -16,7 +16,7 @@ const Booking = () => {
   const [single, setSingle] = useState([]);
 
   useEffect(() => {
-    fetch("https://mighty-inlet-11453.herokuapp.com/services/")
+    fetch("https://api-pro-courier.vercel.app/services/")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);
@@ -32,7 +32,7 @@ const Booking = () => {
     console.log(data);
 
     axios
-      .post("https://mighty-inlet-11453.herokuapp.com/booked", data)
+      .post("https://api-pro-courier.vercel.app/booked", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("added successfully");

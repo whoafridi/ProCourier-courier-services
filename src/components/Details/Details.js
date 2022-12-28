@@ -16,7 +16,7 @@ const Details = ({ service }) => {
             className="text-decoration-none text-dark"
           >
             <Card.Title className="fw-bold">{servicename}</Card.Title>
-            <Card.Text>{description.slice(0, 250)}</Card.Text>
+            <Card.Text>{description.slice(0, 50)}</Card.Text>
           </Link>
           <Card.Text className="fw-bold">Price: {price}</Card.Text>
           <Link to={`/service/${_id}`}>

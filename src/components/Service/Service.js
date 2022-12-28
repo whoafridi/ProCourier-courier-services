@@ -9,7 +9,7 @@ const Service = () => {
   const [single, setSingle] = useState([]);
 
   useEffect(() => {
-    fetch("https://mighty-inlet-11453.herokuapp.com/services/")
+    fetch("https://api-pro-courier.vercel.app/services/")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);

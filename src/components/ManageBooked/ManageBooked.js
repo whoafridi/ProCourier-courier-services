@@ -5,7 +5,7 @@ const ManageBooked = () => {
     const [book, setBook] = useState([]);
 
     useEffect(()=>{
-        fetch("https://mighty-inlet-11453.herokuapp.com/booked")
+        fetch("https://api-pro-courier.vercel.app/booked")
         .then(res =>res.json())
         .then(data => setBook(data))
     },[]);

@@ -6,7 +6,7 @@ const Review = () => {
   const [review, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://watchcom-server.herokuapp.com/review")
+    fetch("https://watch-commerce.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -40,7 +40,7 @@ const Review = () => {
           </div>
         </div>
       ) : (
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={3} className="g-4 mt-5">
           {review.map((r) => (
             <CustomerReview r={r} key={r._id}></CustomerReview>
           ))}

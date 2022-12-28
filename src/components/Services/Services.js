@@ -6,7 +6,7 @@ import Detail from "../Detail/Detail";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("https://mighty-inlet-11453.herokuapp.com/services/")
+    fetch("https://api-pro-courier.vercel.app/services/")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

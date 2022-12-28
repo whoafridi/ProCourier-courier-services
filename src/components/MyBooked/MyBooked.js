@@ -8,7 +8,7 @@ const MyBooked = () => {
     const [single, setSingle] = useState([]);
 
     useEffect(()=>{
-        fetch("https://mighty-inlet-11453.herokuapp.com/booked")
+        fetch("https://api-pro-courier.vercel.app/booked")
         .then(res =>res.json())
         .then(data => setBook(data))
     },[user]);
@@ -22,7 +22,7 @@ const MyBooked = () => {
      const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `https://mighty-inlet-11453.herokuapp.com/booked/${id}`;
+            const url = `https://api-pro-courier.vercel.app/booked/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
